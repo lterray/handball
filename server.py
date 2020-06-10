@@ -1,10 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
+import data_manager
+
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    # Return this to the user who visited this page. The browser will render it.
-    return 'Hello World!'
+def home():
+    players = data_manager.get_all_players()
+    return render_template('team-summary.html', players=players)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

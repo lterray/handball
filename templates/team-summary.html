@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+    </tr>
+    {% for player in players %}
+        <tr class="player">
+            <td>{{ player.first_name }}</td>
+            <td>{{ player.last_name }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
