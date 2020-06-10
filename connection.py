@@ -13,7 +13,6 @@ def fetch_all(query, parameters):
 
 def get_connection():
     try:
-        # connection_string=dbname\='handball' user\='laszlo' host\='localhost' password\='pwd'
         connection_string = os.environ.get('connection_string')
         conn = psycopg2.connect(connection_string)
     except:
