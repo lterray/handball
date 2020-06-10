@@ -1,0 +1,1 @@
+# Handball manager application without goats
