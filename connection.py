@@ -31,6 +31,7 @@ def get_connection():
     try:
         connection_string = os.environ.get('connection_string')
         conn = psycopg2.connect(connection_string)
+        conn.autocommit = True
         return conn
     except:
         print("I am unable to connect to the database")

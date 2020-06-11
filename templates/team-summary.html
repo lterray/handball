@@ -20,12 +20,12 @@
             <td>{{ player.last_name }}</td>
             <td class="vote-cell">{{ player.vote_number }}</td>
             <td>
-                <button class="voting-button" data-vote="up">
+                <button class="voting-button" data-vote="up" data-id="{{ player.id }}">
                     <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                     Vote up
                 </button>
                 <br>
-                <button class="voting-button" data-vote="down">
+                <button class="voting-button" data-vote="down" data-id="{{ player.id }}">
                     <i class="fa fa-thumbs-down" aria-hidden="true"></i>
                     Vote down
                 </button>
