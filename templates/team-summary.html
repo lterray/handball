@@ -18,14 +18,14 @@
         <tr class="player">
             <td>{{ player.first_name }}</td>
             <td>{{ player.last_name }}</td>
-            <td>{{ player.vote_number }}</td>
+            <td class="vote-cell">{{ player.vote_number }}</td>
             <td>
-                <button>
+                <button class="voting-button" data-vote="up">
                     <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                     Vote up
                 </button>
                 <br>
-                <button>
+                <button class="voting-button" data-vote="down">
                     <i class="fa fa-thumbs-down" aria-hidden="true"></i>
                     Vote down
                 </button>
