@@ -1,15 +1,35 @@
 {% extends 'layout.html' %}
 
+{% block head_end %}
+
+    <script src="{{ url_for('static', filename='/js/team.js') }}" defer></script>
+
+{% endblock %}
+
 {% block content %}
 <table>
     <tr>
         <th>First name</th>
         <th>Last name</th>
+        <th>Votes</th>
+        <th>Action</th>
     </tr>
     {% for player in players %}
         <tr class="player">
             <td>{{ player.first_name }}</td>
             <td>{{ player.last_name }}</td>
+            <td>{{ player.vote_number }}</td>
+            <td>
+                <button>
+                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                    Vote up
+                </button>
+                <br>
+                <button>
+                    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                    Vote down
+                </button>
+            </td>
         </tr>
     {% endfor %}
 </table>

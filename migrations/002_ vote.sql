@@ -1,0 +1,1 @@
+ALTER table player ADD COLUMN vote_number int DEFAULT 0;
